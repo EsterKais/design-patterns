@@ -24,20 +24,24 @@ end
 
 class HighQualitySlowPrinter
   def self.make_car
+    puts "Making a high quality car!"
     Car.new
   end
 
   def self.make_truck
+    puts "Making a high quality truck!"
     Truck.new
   end
 end
 
 class LowQualityFastPrinter
   def self.make_car
+    puts "Making a low quality car!"
     Car.new
   end
 
   def self.make_truck
+    puts "Making a low quality truck!"
     Truck.new
   end
 end
@@ -51,14 +55,12 @@ class Collection
   def produce(printer:, number_of_cars: 0, number_of_trucks: 0)
     number_of_cars.times do |car|
       @cars << printer.make_car
-      puts "Made a car with #{printer.to_s}!"
     end
 
 
 
     number_of_trucks.times do |truck|
       @trucks << printer.make_truck
-      puts "Made a truck #{printer.to_s}!"
     end
   end
 end
